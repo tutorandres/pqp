@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="PlantillaController">
   <children>
     <SplitPane dividerPositions="0.22073578595317725" focusTraversable="true" prefHeight="318.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="82.0">
       <items>
@@ -19,7 +19,7 @@
         </AnchorPane>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
           <children>
-            <SplitPane dividerPositions="0.2484076433121019" focusTraversable="true" orientation="VERTICAL" prefHeight="398.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <SplitPane dividerPositions="0.2515923566878981" focusTraversable="true" orientation="VERTICAL" prefHeight="398.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                   <children>
@@ -45,7 +45,7 @@
                             <Insets />
                           </HBox.margin>
                         </HBox>
-                        <TextField fx:id="asunto" prefWidth="316.0" promptText="ASUNTO" HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="asunto" prefWidth="316.0" promptText="ASUNTO" styleClass="theme" HBox.hgrow="ALWAYS" />
                       </children>
                     </HBox>
                     <Label layoutX="18.0" layoutY="43.0" text="DESCRIPCION" />
@@ -58,10 +58,18 @@
         </AnchorPane>
       </items>
     </SplitPane>
-    <ImageView id="REVA EL CARRO ELECTRICO" fitHeight="65.0" fitWidth="437.0000915527344" layoutX="81.0" layoutY="9.0" pickOnBounds="true">
+    <ImageView id="REVA EL CARRO ELECTRICO" fitHeight="65.0" fitWidth="285.9999694824219" layoutX="15.0" layoutY="9.0" pickOnBounds="true">
       <image>
         <Image url="@../logo.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="22.0">
+      <children>
+        <Button fx:id="nuevo" mnemonicParsing="false" onAction="#nuevoError" text="Nuevo" />
+        <Button fx:id="guardar" mnemonicParsing="false" onAction="#guardarError" text="Guardar" />
+        <Button fx:id="eliminar" mnemonicParsing="false" onAction="#eliminarError" text="Eliminar" />
+      </children>
+    </HBox>
+    <Label fx:id="mensaje" layoutX="328.0" layoutY="54.0" prefWidth="236.0" />
   </children>
 </AnchorPane>
