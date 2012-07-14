@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
-import login.model.User;
+import us.andresgarcia.parqueadero.User;
 
 /**
  * Profile Controller.
