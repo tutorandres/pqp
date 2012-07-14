@@ -60,7 +60,7 @@
     </SplitPane>
     <ImageView id="REVA EL CARRO ELECTRICO" fitHeight="65.0" fitWidth="437.0000915527344" layoutX="81.0" layoutY="9.0" pickOnBounds="true">
       <image>
-        <Image url="@../logo.png" preserveRatio="true" smooth="true" />
+        <Image url="@../../../../../../../Desktop/logo.png" preserveRatio="true" smooth="true" />
       </image>
     </ImageView>
   </children>
