@@ -8,37 +8,50 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="login.LoginController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" styleClass="background" xmlns:fx="http://javafx.com/fxml" fx:controller="us.andresgarcia.controladores.LoginController">
   <children>
     <AnchorPane id="anchorPane2" prefHeight="300.0" prefWidth="500.0" styleClass="top-segment" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <children>
-        <VBox id="VBox" alignment="CENTER" prefHeight="300.0" prefWidth="421.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+        <HBox layoutX="20.0" layoutY="14.0" prefHeight="46.0" prefWidth="386.5">
           <children>
-            <AnchorPane id="AnchorPane" prefHeight="180.0" prefWidth="430.0">
+            <ImageView id="app-login-logo">
+              <image>
+                <Image url="@../recursos/logopqparqueo.png" preserveRatio="true" smooth="true" />
+              </image>
+            </ImageView>
+          </children>
+        </HBox>
+        <VBox id="VBox" alignment="CENTER" minWidth="422.0" prefHeight="193.5" prefWidth="422.0" spacing="5.0" AnchorPane.bottomAnchor="0.25" AnchorPane.leftAnchor="43.5" AnchorPane.rightAnchor="34.5" AnchorPane.topAnchor="106.25">
+          <children>
+            <AnchorPane id="AnchorPane" minHeight="134.0" prefHeight="149.0" prefWidth="422.0">
               <children>
-                <Label id="label1" layoutX="14.0" layoutY="67.0" text="Username" />
-                <TextField id="textField1" fx:id="userId" layoutY="86.0" prefWidth="415.0" promptText="Username" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
-                <Label id="label1" layoutX="14.0" layoutY="139.0" text="Password" />
-                <PasswordField id="passwordField1" fx:id="password" layoutY="157.0" prefWidth="415.0" promptText="Password" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" />
-                <ImageView id="app-login-logo" layoutY="-12.0">
-                  <image>
-                    <Image url="@LoginLogo.png" preserveRatio="true" smooth="true" />
-                  </image>
-                </ImageView>
+                <Label id="label1" layoutX="10.0" layoutY="6.0" text="Username" />
+                <TextField id="textField1" fx:id="userId" layoutY="31.0" prefWidth="415.0" promptText="Username" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="-1.0" />
+                <Label id="label1" layoutX="10.0" layoutY="75.0" text="Password" />
+                <PasswordField id="passwordField1" fx:id="password" layoutY="96.0" prefWidth="415.0" promptText="Password" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="-1.0" />
+                <HBox id="hBox1" alignment="CENTER" prefHeight="25.0" prefWidth="418.0" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="7.0">
+                  <children>
+                    <Label id="label2" fx:id="errorMessage" />
+                  </children>
+                </HBox>
               </children>
             </AnchorPane>
           </children>
         </VBox>
       </children>
     </AnchorPane>
-    <Button id="button1" fx:id="login" defaultButton="true" onAction="#processLogin" prefHeight="70.0" prefWidth="400.0" text="Login" AnchorPane.bottomAnchor="66.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
-    <HBox id="hBox1" alignment="CENTER" prefHeight="25.0" prefWidth="418.0" AnchorPane.bottomAnchor="156.0" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0">
+    <Button id="button1" fx:id="login" defaultButton="true" onAction="#processLogin" prefHeight="70.0" prefWidth="400.0" text="Login" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="38.5" AnchorPane.rightAnchor="41.5" />
+    <HBox layoutX="169.0" layoutY="440.0" prefHeight="46.0" prefWidth="159.0">
       <children>
-        <Label id="label2" fx:id="errorMessage" />
+        <ImageView id="app-login-logo">
+          <image>
+            <Image url="@../recursos/logopqsoft.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
       </children>
     </HBox>
   </children>
   <stylesheets>
-    <URL value="@Login.css" />
+    <URL value="@../recursos/Login.css" />
   </stylesheets>
 </AnchorPane>

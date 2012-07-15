@@ -15,6 +15,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
 import us.andresgarcia.parqueadero.User;
 
+import us.andresgarcia.parqueadero.Main;
+
 /**
  * Profile Controller.
  */

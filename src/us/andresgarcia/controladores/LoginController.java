@@ -14,6 +14,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
+import us.andresgarcia.parqueadero.Main;
+
 /**
  * Login Controller.
  */
@@ -40,7 +42,8 @@ public class LoginController extends AnchorPane implements Initializable {
         errorMessage.setText("");
     }
 
-    public void processLogin(ActionEvent event) {
+    public void processLogin(ActionEvent event) 
+    {
         if (application == null){
             // We are running in isolated FXML, possibly in Scene Builder.
             // NO-OP.
