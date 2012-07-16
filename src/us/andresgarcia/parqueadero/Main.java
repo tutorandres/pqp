@@ -28,6 +28,7 @@ public class Main extends Application {
     private User loggedUser;
     private final double MINIMUM_WINDOW_WIDTH = 390.0;
     private final double MINIMUM_WINDOW_HEIGHT = 500.0;
+    private final String titulo = "PQParqueo V1.0";
 
     /**
      * @param args the command line arguments
@@ -42,6 +43,7 @@ public class Main extends Application {
             stage = primaryStage;
             stage.setMinWidth(MINIMUM_WINDOW_WIDTH);
             stage.setMinHeight(MINIMUM_WINDOW_HEIGHT);
+            stage.setTitle(titulo);
             gotoLogin();
             primaryStage.show();
         } catch (Exception ex) {
