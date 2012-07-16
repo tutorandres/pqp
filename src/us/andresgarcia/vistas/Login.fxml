@@ -41,15 +41,12 @@
       </children>
     </AnchorPane>
     <Button id="button1" fx:id="login" defaultButton="true" onAction="#processLogin" prefHeight="70.0" prefWidth="400.0" text="Login" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="38.5" AnchorPane.rightAnchor="41.5" />
-    <HBox layoutX="142.0" layoutY="430.0" prefHeight="46.0" prefWidth="159.0">
-      <children>
-        <ImageView id="app-login-logo" fitHeight="61.0" fitWidth="213.0">
-          <image>
-            <Image url="@../recursos/logopqsoft.png" preserveRatio="true" smooth="true" />
-          </image>
-        </ImageView>
-      </children>
-    </HBox>
+    <HBox layoutX="142.0" layoutY="430.0" prefHeight="46.0" prefWidth="159.0" />
+    <ImageView id="app-login-logo" fitHeight="31.0" fitWidth="141.0" layoutX="178.0" layoutY="455.0">
+      <image>
+        <Image url="@../recursos/logopqsoft.png" preserveRatio="true" smooth="true" />
+      </image>
+    </ImageView>
   </children>
   <stylesheets>
     <URL value="@../recursos/Login.css" />
