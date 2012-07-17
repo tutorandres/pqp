@@ -25,6 +25,12 @@ public class prueba {
    	
     
     public static void main(String[] args) {
+        
+        
+               System.setProperty("derby.system.home", System.getProperty("user.dir")
+            + "/bd");
+        
+        
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		EntityManager em = factory.createEntityManager();
 		// Read the existing entries and write to console
