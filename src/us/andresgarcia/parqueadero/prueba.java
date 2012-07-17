@@ -51,35 +51,6 @@ public class prueba {
 
 		em.close();
 	} 
-   
- /*public static void main(String[] args) {
-      
-   try {//Por si ocurre algun error en la ejecucion
-     //Carga el Driver de sqlite
-     Class.forName("org.sqlite.JDBC");
-     //Conecta a la base de datos prueba.db,si no existe la crea.
-     Connection conn =DriverManager.getConnection("jdbc:sqlite:db/pqparqueo.sqlite");
-     //Abre un estamento para la conexion anteriormente abierta
-     Statement estamento = conn.createStatement(); 
-     //Ejecuta sentencia sql estandar que Borra la tabla empleados si existe
-     //estamento.executeUpdate("drop table if exists empleados;");
-     //Ejecuta sentencia sql estandar que crea una tabla llamada empleados
-     //estamento.executeUpdate("CREATE TABLE empleados (id INT, nombre varchar(80));");
-     //Ejecuta sentencia sql estandar que un inserta un registro en la tabla empleados
-     //estamento.executeUpdate("INSERT INTO empleados (id,nombre) VALUES(1,'Luis');");
-     //Ejecuta sentencia sql que selecciona  los registros en la tabla empleados
-     ResultSet rs=estamento.executeQuery("SELECT * FROM usuarios;");
-     //Recorriendo el ResultSet 
-     //while(rs.next()){
-       //Extrae el campo id,nombre el repectivo orden 1,2
-       //System.out.println("Codigo:"+rs.getInt(1)+"  Nombre:"+rs.getString(2));
-     //}//Fin while            
-    } catch (Exception ex) {
-      System.out.println("--------Error--------"+ex.getMessage());
-    }//Fin try
-   
- }//fin Main
-}//fin Clase*/
                 
                 
 }
