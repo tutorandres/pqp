@@ -28,7 +28,7 @@ public class prueba {
         
         
                System.setProperty("derby.system.home", System.getProperty("user.dir")
-            + "/bd");
+               + System.getProperty("file.separator") + "bd");
         
         
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
