@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author andres
  */
-public class PlantillaController implements Initializable{
+public class PrincipalController implements Initializable{
     
     
     @FXML

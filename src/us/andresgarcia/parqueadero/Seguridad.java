@@ -6,7 +6,7 @@ package us.andresgarcia.parqueadero;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Authenticator {
+public class Seguridad {
     
    private static final Map<String, String> USERS = new HashMap<String, String>();
     

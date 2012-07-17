@@ -13,13 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-
-import us.andresgarcia.parqueadero.Main;
+import us.andresgarcia.parqueadero.Parqueadero;
 
 /**
  * Login Controller.
  */
-public class LoginController extends AnchorPane implements Initializable {
+public class InicioController extends AnchorPane implements Initializable {
 
     @FXML
     TextField userId;
@@ -30,10 +29,10 @@ public class LoginController extends AnchorPane implements Initializable {
     @FXML
     Label errorMessage;
 
-    private Main application;
+    private Parqueadero application;
     
     
-    public void setApp(Main application){
+    public void setApp(Parqueadero application){
         this.application = application;
     }
     
@@ -44,7 +43,10 @@ public class LoginController extends AnchorPane implements Initializable {
 
     public void processLogin(ActionEvent event) 
     {
-        if (application == null){
+        
+        
+       System.out.println("Hola apreto el boton"); 
+       /* if (application == null){
             // We are running in isolated FXML, possibly in Scene Builder.
             // NO-OP.
             errorMessage.setText("Hello " + userId.getText());
@@ -52,6 +54,6 @@ public class LoginController extends AnchorPane implements Initializable {
             if (!application.userLogging(userId.getText(), password.getText())){
                 errorMessage.setText("Unknown user " + userId.getText());
             }
-        }
+        }*/
     }
 }

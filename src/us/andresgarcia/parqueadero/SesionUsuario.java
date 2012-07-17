@@ -8,6 +8,6 @@ package us.andresgarcia.parqueadero;
  *
  * @author andres
  */
-public class Vehiculo {
+public class SesionUsuario {
     
 }
