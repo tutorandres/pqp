@@ -5,20 +5,20 @@
 package us.andresgarcia.modelo;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+
 
 @Entity
 public class Empleado implements Serializable {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private String nombresYapellidos;
-	private String contrasenia;
-        private String correo;
-        private String identificacion;
-        private String rol;
+    
+        @Id
+        @GeneratedValue(strategy=GenerationType.IDENTITY)
+        private Integer id;
+	private String  nombresYapellidos;
+	private String  contrasenia;
+        private String  correo;
+        private String  identificacion;
+        private String  rol;
 
 	public String getnombresYapellidos() {
 		return nombresYapellidos;
