@@ -1,6 +1,5 @@
 /build/
 /dist/
-/bd/
 *.bak
 *.log
 /nbproject/private/
