@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javax.persistence.*;
+import us.andresgarcia.modelo.Empleado;
 import us.andresgarcia.parqueadero.Parqueadero;
 
 /**
@@ -21,39 +23,56 @@ import us.andresgarcia.parqueadero.Parqueadero;
 public class InicioController extends AnchorPane implements Initializable {
 
     @FXML
-    TextField userId;
+    TextField identificacion;
     @FXML
-    PasswordField password;
+    PasswordField contrasenia;
     @FXML
-    Button login;
+    Button bvalidar;
     @FXML
-    Label errorMessage;
-
+    Label mensajes;
     private Parqueadero application;
-    
-    
-    public void setApp(Parqueadero application){
+
+    public void setApp(Parqueadero application) {
         this.application = application;
     }
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        errorMessage.setText("");
+        mensajes.setText("");
     }
 
-    public void processLogin(ActionEvent event) 
-    {
+    public void processIdentificar(ActionEvent event) {
         
+        EntityManagerFactory factory;
+        factory = Persistence.createEntityManagerFactory(Parqueadero.PERSISTENCE_UNIT_NAME);
+        EntityManager em = factory.createEntityManager();
+        // 1-Send query to database to see if that user exist
+        Query query = em.createQuery("SELECT r FROM Empleado r WHERE r.contrasenia=:contraparam AND r.identificacion=:identiparam");
+        query.setParameter("identiparam", identificacion.getText());
+        query.setParameter("contraparam", contrasenia.getText());
+        // 2-If the query returns the user(Role) object, store it somewhere in
+        // the session
+        Empleado empleado;
         
-       System.out.println("Hola apreto el boton"); 
-       /* if (application == null){
-            // We are running in isolated FXML, possibly in Scene Builder.
-            // NO-OP.
-            errorMessage.setText("Hello " + userId.getText());
-        } else {
-            if (!application.userLogging(userId.getText(), password.getText())){
-                errorMessage.setText("Unknown user " + userId.getText());
-            }
-        }*/
+        try{ 
+            empleado = (Empleado) query.getSingleResult();     
+        } catch(NoResultException e) {
+            empleado = null;
+        }
+        
+
+        if (empleado != null && empleado.getidentificacion().equals(identificacion.getText())
+                && empleado.getcontrasenia().equals(contrasenia.getText())) {
+            //FacesContext.getCurrentInstance().getExternalContext()
+            //    .getSessionMap().put("userRole", role);
+            // 3-return true if the user state was saved
+           //System.out.println("SESION CORRECTA.");
+          mensajes.setText("Inicio de sesión CORRECTO para " + identificacion.getText());
+
+        }
+        else{
+                mensajes.setText("Inicio de sesión invalido para " + identificacion.getText()
+                + ". Compruebe de nuevo los datos y vuelva a intentarlo.");
+        }
     }
 }

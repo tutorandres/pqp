@@ -102,7 +102,7 @@ public class Parqueadero extends Application {
                 
         
         stage.setScene(new Scene(root));
-        stage.setTitle("Parqueadero v1.0");
+        stage.setTitle("PQParqueo v1.0");
         stage.show();
     }
     
