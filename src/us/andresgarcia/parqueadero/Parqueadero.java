@@ -44,7 +44,6 @@ public class Parqueadero extends Application {
         System.setProperty("derby.system.home", System.getProperty("user.dir")
         + System.getProperty("file.separator") + "bd");
         
-        
                 //agregamso el usuario de prueba
         	factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		EntityManager em = factory.createEntityManager();
@@ -89,21 +88,27 @@ public class Parqueadero extends Application {
 		em.persist(nuevoEmpleado);
 		em.getTransaction().commit();*/
 
-                
-                Query q = em.createQuery("select t from Empleado t");
+                Query q = em.createQuery("select e from Empleado e");
 		List<Empleado> empleadosList = q.getResultList();
 		for (Empleado empleado : empleadosList) {
 			System.out.println(empleado);
 		}
 		System.out.println("Size: " + empleadosList.size());
                 
-                
                 em.close();
                 
-        
         stage.setScene(new Scene(root));
         stage.setTitle("PQParqueo v1.0");
         stage.show();
+        
+        
+        root = FXMLLoader.load(getClass().getResource("../vistas/Principal.fxml"));
+        stage.setScene(new Scene(root));
+        stage.setTitle("PQParqueo v1.0");
+        stage.show();
+        
+        
+        
     }
     
 }
